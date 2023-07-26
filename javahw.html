@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <title> java</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            text-align: center;
+            color: black;
+            background-color: white;
+            padding: 5px 0;
+            border-radius: 4px;
+            max-width: 250px;
+            margin: 0 auto;
+            list-style-type: none;
+        }
+
+        li:hover {
+            color: black;
+            background: #fffbef;
+            cursor: pointer;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            color: black;
+            background: blueviolet;
+            padding: 2px 3px 2px 3px;
+            border-radius: 30px;
+            transition: all 200ms ease-in-out;
+        }
+
+        button:hover {
+            background: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <span class="emoji">😊</span><br /> Currently 45° in Patna<br />13°/<strong>23°</strong>
+    </h1>
+    <ul>
+        <li> ⛈️Tomorrow<br /> 10°/<strong>22°</strong>
+        </li>
+        <li> 🌥️Saturday<br /> 15°/<strong>17°</strong>
+        </li>
+        <li> ☀️Sunday<br /> 25°/<strong>27°</strong>
+        </li>
+    </ul>
+    <button> Change City </button>
+    <p> Coded by Rupali Bharti </p>
+    <script>
+        function details () {
+            let city = prompt( "which city do you live in?" );
+            let temp = prompt( "what is the temperature?" );
+            if ( temp > 45 ) {
+                let h1 = document.querySelector( "h1" );
+                h1.innerHTML = "😓" + "<br />" + "Currently" + " " + temp + "°" + " " + "in" + " " + city + " " + "<br/>" + "10°/22°";
+            }
+
+            else if ( temp < -3 ) {
+                let h1 = document.querySelector( "h1" );
+                h1.innerHTML = "🥶" + "<br />" + "Currently" + " " + temp + "°" + " " + "in" + " " + city + " " + "<br/>" + "10°/22°";
+            }
+            else {
+                let h1 = document.querySelector( "h1" );
+                h1.innerHTML = "😊" + "<br />" + "Currently" + " " + temp + "°" + " " + "in" + " " + city + " " + "<br/>" + "25°/28°";
+            }
+        }
+        let element = document.querySelector( "button" );
+        element.addEventListener( "click", details );
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <title>music heals</title>
+    <style>
+        body {
+            background: rgb(187, 201, 78);
+        }
+
+        h1 {
+            text-align: center;
+            color: #8a1253;
+        }
+
+        h2 {
+            text-align: center;
+            color: #c3195d;
+            background: rgb(78, 78, 201);
+            border-radius: 4px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        h3 {
+            color: #97cba9;
+            background-color: #005792;
+            text-align: center;
+            max-width: 200px;
+            margin: 0 auto;
+            border-radius: 4px;
+            border: 1px auto;
+            box-shadow: #97cba9;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 80%;
+            border-radius: 39px;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            color: blueviolet;
+            background: #f48db4;
+            padding: 20px 30px 20px 30px;
+            border-radius: 30px;
+            transition: 200ms ease-in-out;
+            font-weight: bold;
+            font-size: medium;
+            border: 1px auto;
+            box-shadow: #8a1253;
+        }
+
+        p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #8a1253;
+            font-size: medium;
+            font-weight: bold;
+            line-height: none;
+        }
+
+        li {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: cornflowerblue;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        button:hover {
+            color: #f48db4;
+            background: blueviolet;
+            cursor: pointer;
+        }
+
+        .coded {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> MUSIC </h1>
+    <h2> Music is the safe kind of high </h2><br /><br />
+    <h3>Hlo Rupali! Here is your party music playlist</h3>
+    <p> Music is sound that has been organized by using rhythm, melody or harmony.<br />Music is considered a language
+        people around the world connect universally.<br />We find music as the best friend in happiness and sorrow.
+        Music makes us feel special and gives us enthusiasm.<br /> It also makes us relate to the situations of life.
+    </p><a href="https://www.vedantu.com/blog/interesting-facts-about-music">MORE INFO</a>
+    <img src="https://variety.com/wp-content/uploads/2022/07/Music-Streaming-Wars.jpg" />
+    <hr />
+    <div><strong>Some intresting facts about music:</strong></div>
+    <ul>
+        <li><em> Music Can Help You Concentrate and Work Better</em> </li>
+        <li><em>Beats That Keep Your Heartbeats Healthy</em> </li>
+        <li><em> Beats That Keep Your Heartbeats Healthy </em></li>
+    </ul>
+    <button>playlist</button>
+    <div class="coded">coded by Rupali Bharti</div>
+    <script>
+        function playlist () {
+            let name = prompt( "What is your Name?" );
+            let song = prompt( "Which type of song do you like listing?" );
+
+            if ( song === "party" ) {
+                let h = document.querySelector( "h3" );
+                h.innerHTML = "Hlo" + " " + name + "!" + " your" + " " + song + "🎧" + " music playlist" + " is ready";
+                alert( "HURRAY! That's my chice too😊" );
+            }
+            else {
+                let h = document.querySelector( "h3" );
+                h.innerHTML = "Hlo" + " " + name + "!" + " your" + " " + song + "🎧" + " music playlist" + " is ready";
+
+            }
+        }
+        let element = document.querySelector( "button" );
+        element.addEventListener( "click", playlist );
+    </script>
+</body>
+
+</html>

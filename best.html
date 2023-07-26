@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            background: #79c2d0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            justify-content: center;
+            display: flex;
+        }
+
+        h2 {
+            font-size: larger;
+            font-family: "Pacifico", cursive;
+            color: #c3195d;
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: larger;
+            font-family: "Belanosima", sans-serif;
+        }
+
+        ul {
+            padding: none;
+        }
+
+        li {
+            list-style-type: none;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            font-family: "Caprasimo", cursive;
+            color: #8a1253;
+            max-width: 400px;
+            border-radius: 30px;
+        }
+
+        li:hover {
+            background: #407088;
+            cursor: pointer;
+            color: #e8751a;
+            font-size: small;
+        }
+
+        p {
+            text-align: center;
+            color: #2c5d63;
+            font-family: "Permanent Marker", cursive;
+        }
+
+        button {
+            background: #c06c84;
+            font-size: larger;
+            font-family: "Belanosima", sans-serif;
+            color: #c3195d;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            color: #c06c84;
+            background: #c3195d;
+        }
+
+        .go {
+            color: red;
+        }
+
+        .o {
+            color: yellowgreen;
+        }
+
+        .gle {
+            color: blue;
+        }
+
+        .in {
+            color: orangered;
+        }
+
+        .d {
+            color: white;
+            background: blue;
+        }
+
+        .ia {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>👈 👉 🤓</div>
+    <h1>
+        <span class="go">GO</span><span class="o">O</span><span class="gle">GLE </span>
+    </h1>
+    <form>
+        <input type="text" placeholder="search" autofocus />
+    </form>
+    <br /><br />
+    <button>Weather forcast☀️🌥️⛅</button>
+    <h3>
+        <span class="in">IN</span><span class="d">D</span><span class="ia">IA</span>😊<br />45°/25°
+    </h3>
+    <ul>
+        <li>Tuesday's temperature☀️<br />45°/29° ●'◡'●</li>
+        <br />
+        <li>Wednesday's temperature⛅<br />29°/11° ^_^</li>
+        <br />
+        <li>Thrushday's Temperature😶‍🌫️<br />34°/16° ❁´◡`❁</li>
+        <br />
+        <li>Friday's Temperature☀️<br />50°/34° O.O</li>
+        <br />
+        <li>Saturday's Temperature☀️<br />48°/26° ^0^</li>
+        <br />
+    </ul>
+    <p>Coded by Rupali Bharti 👸</p>
+    <script>
+        function climate () {
+            let country = prompt( "which country do you live in?" );
+            let weather = prompt( "what is the present temperature there?" );
+            if ( weather > 45 ) {
+                let h = document.querySelector( "h3" );
+                h.innerHTML =
+                    "you are from " +
+                    country +
+                    " " +
+                    "<br />" +
+                    "the present temperature is " +
+                    weather +
+                    <br /> +
+                    "Bro! its really hot 😓";
+            } else if ( weather < 5 ) {
+                let h = document.querySelector( "h3" );
+                h.innerHTML =
+                    "you are from " +
+                    country +
+                    " " +
+                    "<br />" +
+                    "the present temperature is " +
+                    weather +
+                    <br /> +
+                    "Bro! its really cool🥶";
+            } else {
+                let h = document.querySelector( "h3" );
+                h.innerHTML =
+                    "you are from " +
+                    country +
+                    " " +
+                    "<br />" +
+                    "the present temperature is " +
+                    weather +
+                    <br /> +
+                    "that's good! enjoy😊";
+            }
+        }
+        let details = document.querySelector( "button" );
+        details.addEventListener( "click", climate );
+    </script>
+</body>
+
+</html>
